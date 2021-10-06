@@ -21,7 +21,9 @@
                     </div>
     
                     <div class="header-cart">
-                        <a href="{{ ('cart') }}" class="cart-link" data-toggle="modal" data-target="#cart-item"><i class="fa fa-cart-arrow-down"></i></a>
+                        {{-- <a href="{{ ('cart') }}" class="cart-link" data-toggle="modal" data-target="#cart-item"><i class="fa fa-cart-arrow-down"></i></a>
+                         --}}
+                         <a href="{{ route('list_cart') }}" class="cart-link"><i class="fa fa-cart-arrow-down"></i></a>
                         <span class="number-of-cart">20</span>
                     </div>
     

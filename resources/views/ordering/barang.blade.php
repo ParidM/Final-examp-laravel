@@ -25,7 +25,8 @@
                                 </span>
                             </div>
 
-                            <a href="{{ ('cart') }}"  class="btn btn-cart text-center add-to-cart pull-right">
+                            {{-- <a href="{{ ('cart') }}"  class="btn btn-cart text-center add-to-cart pull-right"> --}}
+                                <a href="{{route('add_cart', ['id' => $item->id, 'qty' => 3])}}"  class="btn btn-cart text-center add-to-cart pull-right">
                                 <i class="fa fa-cart-plus"></i>
                                 Simpan
                             </a>

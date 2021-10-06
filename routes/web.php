@@ -11,6 +11,7 @@ use App\Http\Controllers\Form_PengeluaranController;
 use App\Http\Controllers\OrderlistController;
 use App\Http\Controllers\ProductsControler;
 use App\Http\Controllers\OrderingController;
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -51,6 +52,9 @@ Route::get('/product_single', function () {
 Route::get('/ordering',[OrderingController::class, 'ordering'])->name('ordering');
 Route::get('/barang',[ProductsControler::class, 'barang'])->name('barang');
 Route::get('/show_products',[ProductsControler::class,'show'])->name('show_products');
+Route::get('/add-cart/{id}/{qty}', [CartController::class, 'AddCart'])->name('add_cart');
+Route::get('/list-cart', [CartController::class, 'ListCart'])->name('list_cart');
+Route::get('/jumlah', [CartController::class, 'jumlah'])->name('jumlah');
 
 
 //Reporting

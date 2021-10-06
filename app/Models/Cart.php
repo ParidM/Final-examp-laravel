@@ -8,9 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Cart extends Model
 {
     use HasFactory;
-    public function products()
+
+    protected $guarded = ['id'];
+
+    public function product()
     {
-        return $this->belongsTo('App\Products','products_id','id');
+        // return $this->belongsTo('App\Products','products_id','id');
+        return $this->belongsTo(Products::class);
     }
     public function Orderlist()
     {
