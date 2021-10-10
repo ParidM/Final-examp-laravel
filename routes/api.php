@@ -24,7 +24,7 @@ use App\Http\Controllers\OrderlistController;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::post('/products',[ProductsControler::class,'createproducts']);
+Route::post('/products',[ProductsControler::class,'createproducts'])->name('createproducts');
 Route::post('/CreateAkun',[AdminController::class,'CreateAkun']);
 Route::get('/listadminApi',[OwnerController::class, 'listadminApi'])->name('listadminApi');
 Route::get('/pemasukanApi',[PemasukanController::class,'pemasukanApi'])->name('pemasukanApi');

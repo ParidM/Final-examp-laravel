@@ -50,6 +50,8 @@ Route::get('/product_single', function () {
 
 //Ordering
 Route::get('/ordering',[OrderingController::class, 'ordering'])->name('ordering');
+Route::get('/login',[OrderingController::class, 'login'])->name('login-ordering');
+Route::get('/sigin',[OrderingController::class, 'sigin'])->name('sigin');
 Route::get('/barang',[ProductsControler::class, 'barang'])->name('barang');
 Route::get('/show_products',[ProductsControler::class,'show'])->name('show_products');
 Route::get('/add-cart/{id}/{qty}', [CartController::class, 'AddCart'])->name('add_cart');
